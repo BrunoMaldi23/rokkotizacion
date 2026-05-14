@@ -1,0 +1,53 @@
+@imp@import "../../node_modules/tailwindcss/index.css";ort "tailwindcss";
+
+@theme {
+  /* Configuración de Identidad Visual para ROKKO-Tización */
+  --color-bg: #0a0a0a;
+  --color-surface: #141414;
+  --color-surface2: #1e1e1e;
+  --color-border1: #282828;
+  --color-cian: #00d1ff;
+  --color-muted: #555555;
+
+  /* Vinculación con las fuentes de Next.js (layout.tsx) */
+  --font-bebas: var(--font-bebas);
+  --font-dm: var(--font-dm);
+}
+
+/* Configuración Base */
+@layer base {
+  *, ::after, ::before {
+    @apply border-border1;
+  }
+
+  body {
+    @apply bg-bg text-white antialiased font-dm;
+    background-color: var(--color-bg);
+    color: #ffffff;
+  }
+
+  /* Estilización de la barra de desplazamiento */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border1);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted);
+  }
+}
+
+/* Utilidades personalizadas para el proyecto de Temuco */
+@layer utilities {
+  .text-shadow-cian {
+    text-shadow: 0 0 10px rgba(0, 209, 255, 0.3);
+  }
+}
