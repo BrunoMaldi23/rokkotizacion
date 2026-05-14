@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* Quita la sección experimental por ahora para limpiar los warnings */
 };
 
 export default nextConfig;
