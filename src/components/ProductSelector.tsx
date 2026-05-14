@@ -143,7 +143,7 @@ export default function ProductSelector({ category, model, onAddToCart }: Produc
                       <option key={color} value={color}>{color}</option>
                     ))}
                   </select>
-                 </td>
+                </td>
                 <td className="p-3">
                   <select
                     value={variant.size}
@@ -154,7 +154,7 @@ export default function ProductSelector({ category, model, onAddToCart }: Produc
                       <option key={size} value={size}>{size}</option>
                     ))}
                   </select>
-                 </td>
+                </td>
                 <td className="p-3">
                   <select
                     value={variant.fabric}
@@ -167,7 +167,7 @@ export default function ProductSelector({ category, model, onAddToCart }: Produc
                       </option>
                     ))}
                   </select>
-                 </td>
+                </td>
                 <td className="p-3">
                   <select
                     value={variant.embroidery}
@@ -178,7 +178,7 @@ export default function ProductSelector({ category, model, onAddToCart }: Produc
                       <option key={emb} value={emb}>{emb}</option>
                     ))}
                   </select>
-                 </td>
+                </td>
                 <td className="p-3">
                   <input
                     type="number"
@@ -187,13 +187,13 @@ export default function ProductSelector({ category, model, onAddToCart }: Produc
                     onChange={(e) => updateVariant(variant.id, 'quantity', parseInt(e.target.value) || 1)}
                     className="border border-gray-300 rounded-lg px-3 py-2 text-sm w-24"
                   />
-                 </td>
+                </td>
                 <td className="p-3 font-medium">
                   ${variant.unitPrice.toLocaleString('es-CL')}
-                 </td>
+                </td>
                 <td className="p-3 font-semibold text-[#00bcd4]">
                   ${variant.total.toLocaleString('es-CL')}
-                 </td>
+                </td>
                 <td className="p-3">
                   <button
                     onClick={() => removeVariant(variant.id)}
@@ -202,11 +202,11 @@ export default function ProductSelector({ category, model, onAddToCart }: Produc
                   >
                     <Trash2 size={16} />
                   </button>
-                 </td>
-               </tr>
+                </td>
+              </tr>
             ))}
           </tbody>
-         </table>
+        </table>
       </div>
 
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6">
